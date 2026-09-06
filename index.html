@@ -83,12 +83,12 @@
                     <div class="payment-card" onclick="selectPayment('bank')">
                         <div class="payment-icon">🏦</div>
                         <h3>Transfer Bank</h3>
-                        <p>BCA, BNI, Mandiri</p>
+                        <p>Bank Jago</p>
                     </div>
                     <div class="payment-card" onclick="selectPayment('ewallet')">
                         <div class="payment-icon">💳</div>
                         <h3>E-Wallet</h3>
-                        <p>GoPay, OVO, Dana</p>
+                        <p>DANA, GoPay, ShopeePay</p>
                     </div>
                 </div>
 
@@ -109,11 +109,11 @@
                     <div class="bank-info">
                         <div class="bank-row">
                             <span>Bank:</span>
-                            <strong>BCA</strong>
+                            <strong>Bank Jago</strong>
                         </div>
                         <div class="bank-row">
                             <span>Nomor Rekening:</span>
-                            <strong>1234567890</strong>
+                            <strong>104521615012</strong>
                         </div>
                         <div class="bank-row">
                             <span>Atas Nama:</span>
@@ -130,14 +130,14 @@
                 <div id="ewallet-payment" class="payment-detail" style="display: none;">
                     <h3>Pilih E-Wallet</h3>
                     <div class="ewallet-options">
+                        <button class="ewallet-btn" onclick="openEwallet('dana')">
+                            <span>🔵 DANA</span>
+                        </button>
                         <button class="ewallet-btn" onclick="openEwallet('gopay')">
                             <span>💚 GoPay</span>
                         </button>
-                        <button class="ewallet-btn" onclick="openEwallet('ovo')">
-                            <span>🟣 OVO</span>
-                        </button>
-                        <button class="ewallet-btn" onclick="openEwallet('dana')">
-                            <span>🔵 DANA</span>
+                        <button class="ewallet-btn" onclick="openEwallet('shopeepay')">
+                            <span>🛍️ ShopeePay</span>
                         </button>
                     </div>
                 </div>
