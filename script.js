@@ -147,9 +147,22 @@ function selectPayment(method) {
 // Buka E-Wallet
 function openEwallet(provider) {
     const totalPrice = document.getElementById('total-price').textContent;
-    let message = `Saya ingin top up dengan ${provider.toUpperCase()}. Total: ${totalPrice}`;
-    const whatsappNumber = '6285804048057';
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    let phoneNumber = '';
+    let providerName = '';
+    
+    if (provider === 'dana') {
+        phoneNumber = '628513688425';
+        providerName = 'DANA';
+    } else if (provider === 'gopay') {
+        phoneNumber = '628513688425';
+        providerName = 'GoPay';
+    } else if (provider === 'shopeepay') {
+        phoneNumber = '628580408057';
+        providerName = 'ShopeePay';
+    }
+    
+    let message = `Saya ingin top up dengan ${providerName}. Total: ${totalPrice}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
 
