@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nailong Store - Top Up Game</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -32,6 +33,7 @@
                         <option value="codm">Call of Duty Mobile</option>
                         <option value="genshin">Genshin Impact</option>
                         <option value="honkai">Honkai Star Rail</option>
+                        <option value="roblox">Roblox</option>
                     </select>
                 </div>
 
@@ -42,6 +44,40 @@
                     </select>
                 </div>
 
+                <!-- Mobile Legends Fields -->
+                <div id="ml-fields" style="display: none;">
+                    <div class="form-group">
+                        <label for="ml-id">Mobile Legends ID:</label>
+                        <div class="input-with-btn">
+                            <input type="text" id="ml-id" placeholder="Contoh: 123456789" maxlength="20">
+                            <button class="btn-verify" onclick="verifyMLAccount()">Verifikasi</button>
+                        </div>
+                        <div id="ml-verify-result" class="verify-result"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ml-server">Server:</label>
+                        <select id="ml-server">
+                            <option value="">-- Pilih Server --</option>
+                            <option value="asia">Asia</option>
+                            <option value="na">North America</option>
+                            <option value="eu">Europe</option>
+                            <option value="sa">South America</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Roblox Fields -->
+                <div id="roblox-fields" style="display: none;">
+                    <div class="form-group">
+                        <label for="roblox-username">Roblox Username:</label>
+                        <div class="input-with-btn">
+                            <input type="text" id="roblox-username" placeholder="Contoh: coolplayer123">
+                            <button class="btn-verify" onclick="verifyRobloxAccount()">Verifikasi</button>
+                        </div>
+                        <div id="roblox-verify-result" class="verify-result"></div>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label for="user-id">ID Akun/Username:</label>
                     <input type="text" id="user-id" placeholder="Masukkan ID atau username akun Anda">
@@ -50,6 +86,11 @@
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" placeholder="Masukkan email Anda">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Nomor WhatsApp:</label>
+                    <input type="tel" id="phone" placeholder="Contoh: 62812345678">
                 </div>
 
                 <div class="price-summary">
@@ -96,10 +137,11 @@
                 <div id="qris-payment" class="payment-detail">
                     <h3>Scan QRIS Code</h3>
                     <div class="qris-container">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='white' width='250' height='250'/%3E%3C/svg%3E" alt="QRIS Code" id="qris-code">
+                        <div id="qrcode"></div>
                     </div>
                     <p class="payment-info">NMID: ID10254669752120</p>
                     <p class="payment-info">Nama: nailong store</p>
+                    <p class="payment-info">Kode: A01</p>
                     <p class="instruction">Scan QR Code di atas menggunakan aplikasi e-wallet atau banking Anda</p>
                 </div>
 
@@ -142,8 +184,62 @@
                     </div>
                 </div>
 
-                <button class="btn-confirm" onclick="confirmPayment()">✓ Saya Sudah Membayar</button>
+                <!-- Payment Status -->
+                <div id="payment-status" class="payment-status" style="display: none;">
+                    <div class="status-content">
+                        <div class="status-icon">⏳</div>
+                        <h3>Menunggu Pembayaran...</h3>
+                        <p id="payment-countdown"></p>
+                        <div class="status-details">
+                            <p><strong>Total:</strong> <span id="status-total">Rp 0</span></p>
+                            <p><strong>Batas Waktu:</strong> <span id="status-time">15 menit</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-confirm" onclick="confirmPayment()" id="btn-confirm">✓ Saya Sudah Membayar</button>
                 <button class="btn-back" onclick="backToForm()">← Kembali</button>
+            </section>
+
+            <!-- Success Section -->
+            <section class="success-section" id="success-section" style="display: none;">
+                <div class="success-card">
+                    <div class="success-icon">✅</div>
+                    <h2>Pembayaran Berhasil!</h2>
+                    <p class="success-message">Diamond/Robux akan masuk dalam 5-15 menit</p>
+                    
+                    <div class="success-details">
+                        <div class="detail-row">
+                            <span>Game:</span>
+                            <strong id="success-game"></strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Nominal:</span>
+                            <strong id="success-nominal"></strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Total Bayar:</span>
+                            <strong id="success-total"></strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Status:</span>
+                            <strong id="success-status">Diproses</strong>
+                        </div>
+                    </div>
+
+                    <div class="countdown-box">
+                        <p>Diamond/Robux masuk dalam:</p>
+                        <div class="countdown" id="countdown">5:00</div>
+                    </div>
+
+                    <p class="support-text">Jika ada masalah, hubungi admin:</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/6285804048057" target="_blank" class="btn-contact">💬 WhatsApp</a>
+                        <a href="mailto:keisekai7l@gmail.com" class="btn-contact">📧 Email</a>
+                    </div>
+
+                    <button class="btn-new-order" onclick="newOrder()">🆕 Pesanan Baru</button>
+                </div>
             </section>
         </main>
 
